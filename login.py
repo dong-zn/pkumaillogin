@@ -10,8 +10,8 @@ def login_mail(username, password):
 	browser = webdriver.Chrome(chrome_options=chrome_options)
 
 	browser.get('https://mail.pku.edu.cn/')
-	browser.find_element_by_id('username').fill(username)
-	browser.find_element_by_id('password').fill(password)
+	browser.find_element_by_id('username').send_keys(username)
+	browser.find_element_by_id('password').send_keys(password)
 	browser.find_element_by_id('login_button').click()
 	time.sleep(5)
 	browser.quit()
