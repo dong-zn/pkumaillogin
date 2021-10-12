@@ -8,7 +8,7 @@ def login_mail(username, password):
 	chrome_options.add_argument('--no-sandbox')
 	chrome_options.add_argument('--disable-dev-shm-usage')
 	chrome_options.add_argument('--headless')
-	browser = webdriver.Chrome(chrome_options=chrome_options)
+	browser = webdriver.Chrome(options=chrome_options)
 
 	browser.get('https://mail.pku.edu.cn/')
 	browser.find_element_by_id('username').send_keys(username)
