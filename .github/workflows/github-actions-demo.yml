@@ -1,13 +1,14 @@
-name: GitHub Actions Demo
+name: PKU Mail Login
 on: [push]
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - uses: actions/setup-node@v2
+    - uses: actions/setup-python@v2.2.2
       with:
-        node-version: '14'
+        python-version: '3.x'
         architecture: 'x64'
-    - run: node -v
-    - run: node test.js
+    - run: python -m pip install --upgrade pip
+    - run: pip install splinter
+    - run: python login.py
