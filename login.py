@@ -13,7 +13,7 @@ def login_mail(username, password):
 	browser.find_element_by_id('username').send_keys(username)
 	browser.find_element_by_id('password').send_keys(password)
 	browser.find_element_by_id('login_button').click()
-	time.sleep(5)
+	time.sleep(1)
 	browser.quit()
 	
 if __name__ == '__main__':
