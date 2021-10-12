@@ -16,11 +16,11 @@ def login_mail(username, password):
 	browser.find_element_by_id('login_button').click()
 	time.sleep(1)
 	browser.quit()
-	print('user ' + username + 'logged in.')
+	print('user ' + username + ' logged in.')
 	
 if __name__ == '__main__':
 	users = os.environ["USERS"]
 	users = eval(users)
-	for user in range(users):
+	for user in users:
 		login_mail(user[0], user[1])
 
