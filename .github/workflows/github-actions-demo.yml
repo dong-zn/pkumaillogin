@@ -1,5 +1,8 @@
 name: PKU Mail Login
-on: [push]
+on: 
+  push:
+  schedule:
+    - cron: '* * * * *'
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
