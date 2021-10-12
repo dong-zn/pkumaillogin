@@ -1,3 +1,4 @@
+import os
 import time
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -15,6 +16,11 @@ def login_mail(username, password):
 	browser.find_element_by_id('login_button').click()
 	time.sleep(1)
 	browser.quit()
+	print('user ' + username + 'logged in.')
 	
 if __name__ == '__main__':
-	login_mail('2101210560', 'dzn-0419')
+	users = os.environ["USERS"]
+	users = eval(users)
+	for user in range(users):
+		login_mail(user[0], user[1])
+
